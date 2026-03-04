@@ -1,0 +1,199 @@
+body {
+  font-family: system-ui;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 8px;
+  margin: 4px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.habit,
+.todo {
+  background: white;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+#calendar {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day {
+  height: 20px;
+  background: #ddd;
+}
+
+.day.active {
+  background: green;
+}
+#heatmap {
+  display: grid;
+  grid-template-columns: repeat(53, 12px);
+  gap: 3px;
+  margin-top: 20px;
+}
+
+.heat-day {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #ebedf0;
+}
+
+.level-1 {
+  background: #c6e48b;
+}
+.level-2 {
+  background: #7bc96f;
+}
+.level-3 {
+  background: #239a3b;
+}
+.level-4 {
+  background: #196127;
+}
+/*Themes*/
+body.default {
+  background: #f4f4f4;
+  color: #111;
+}
+body.dark {
+  background: #111;
+  color: #eee;
+}
+body.neon {
+  background: #000;
+  color: #39ff14;
+}
+
+/*Graph Layout (CSS Grid Tree)*/
+.skill-tree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+.skill-node {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #444;
+  cursor: pointer;
+}
+.locked {
+  opacity: 0.4;
+}
+.unlocked {
+  border-color: gold;
+}
+.progress-bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 8px;
+  background: #2ecc71;
+  border-radius: 4px;
+}
+
+.quest-box {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+}
+
+.habit-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.habit-card:hover {
+  transform: translateY(-5px);
+}
+
+.tab {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Add Mobile Optimization*/
+.container {
+  max-width: 1400px;
+}
+
+/*mobile support*/
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+  }
+
+  .stat-value {
+    font-size: 1.8em;
+  }
+}
+
+/*Add Loading Skeleton (Professional UX)*/
+.skeleton {
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
